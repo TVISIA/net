@@ -5,7 +5,7 @@ main:
     url: /categories/
   - title: "Tags"
     url: /tags/
-  - title: "App"
+  - title: "Apps"
     url: /app/
   - title: "Plugins"
     url: /plugins/
@@ -18,5 +18,5 @@ main:
   - title: "Kontakt"
     url: /kontakt/
   - title: "Telegram"
-    url: "https://t.me/kovi18"
+    url: "https://t.me/koviml"
   
