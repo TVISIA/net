@@ -1,9 +1,22 @@
 main:
-  - title: "Posts"
+  - title: "Beiträge"
     url: /posts/
-  - title: "Categories"
+  - title: "Kategorien"
     url: /categories/
   - title: "Tags"
     url: /tags/
-  - title: "About"
+  - title: "App"
+    url: /app/
+  - title: "Plugins"
+    url: /plugins/
+  - title: "Repositories"
+    url: /repos/
+  - title: "Tags"
+    url: /tags/
+  - title: "Über"
     url: /about/
+  - title: "Kontakt"
+    url: /kontakt/
+  - title: "Telegram"
+    url: "https://t.me/kovi18"
+  
