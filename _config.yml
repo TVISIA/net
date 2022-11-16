@@ -73,7 +73,7 @@ author:
       url: "https://github.com/KOVI18"
     - label: "Telegram"
       icon: "fab fa-fw fa-telegram"
-      url: "https://t.me/wwwkollega"
+      url: "https://t.me/koviml"
 
 footer:
   links:
@@ -85,7 +85,7 @@ footer:
       url: "https://github.com/"
     - label: "Telegram"
       icon: "fab fa-fw fa-telegram"
-      url: https://t.me/wwwkollega
+      url: "https://t.me/koviml"
 
 defaults:
   # _posts
