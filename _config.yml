@@ -71,9 +71,9 @@ author:
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/KOVI18"
-    - label: "Instagram"
-      icon: "fab fa-fw fa-instagram"
-      url: "https://instagram.com/"
+    - label: "Telegram"
+      icon: "fab fa-fw fa-telegram"
+      url: "https://t.me/wwwkollega"
 
 footer:
   links:
@@ -85,7 +85,7 @@ footer:
       url: "https://github.com/"
     - label: "Telegram"
       icon: "fab fa-fw fa-telegram"
-      url: https://t.me/kovi18
+      url: https://t.me/wwwkollega
 
 defaults:
   # _posts
