@@ -85,7 +85,7 @@ footer:
       url: "https://github.com/"
     - label: "Telegram"
       icon: "fab fa-fw fa-telegram"
-      url: "https://t.me/kovi18"
+      url: https://t.me/kovi18
 
 defaults:
   # _posts
