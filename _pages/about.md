@@ -1,8 +1,6 @@
 ---
 permalink: /about/
-title: "About"
+title: "Über KOVI"
 ---
 
-Tempor velit sint sunt ipsum tempor enim ad qui ullamco. Est dolore anim ad velit duis dolore minim sunt aliquip amet commodo labore. Ut eu pariatur aute ea aute excepteur laborum. Esse ea esse excepteur minim mollit qui cillum excepteur ex dolore magna. Labore deserunt fugiat incididunt incididunt sint ea. Consequat dolore aute laboris quis proident quis non et est consectetur ex eiusmod sit culpa.
-
-Cupidatat ea do et in excepteur in. Ad nostrud ut est esse eu duis ea sunt eiusmod. Aliquip tempor veniam sint elit fugiat. Velit incididunt laboris amet incididunt labore dolore irure velit excepteur commodo deserunt laborum. Consectetur eu fugiat veniam veniam Lorem labore magna eiusmod. Ea occaecat reprehenderit pariatur consectetur minim labore ut aliquip.
+KOVI, ist eine Modifikation des bekannten XBMC/Kodi Media Center, oder einfach nur Kodi, ehemals XBMC, ist eine freie und plattformübergreifende Software für die Einrichtung eines Home Theater PCs. Das Projekt ist durch Add-ons stark erweiterbar und erhielt bereits mehrere Auszeichnungen. Ursprünglich für die Spielkonsole Xbox entwickelt, hieß die Software anfangs noch Xbox Media Player. Im Jahr 2002 wurde der Name beschreibender in Xbox Media Center geändert, wobei letztlich das Akronym XBMC Verwendung fand. Mit der Version 14 wurde die Software in Kodi umbenannt, womit die Abkehr von der Xbox-Konsole reflektiert und rechtliche Probleme ausgeräumt werden sollen.
