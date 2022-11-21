@@ -2,13 +2,13 @@
 |||
 
 
-[COLOR RED] Kodi- HackerTeam-v18.9 ANDROID[/COLOR]
--disponible en la web : www.hackerteam.com
-[COLOR RED]HackerTeam DARK[/COLOR]
-[COLOR white]HackerTeam REDLINE DARK 1.1[/COLOR]
+[COLOR DEEPSKYBLUE]KOVI Mediencenter für Android TV / Fire TV [/COLOR]
+Projekt : https://kovi.ml
+[COLOR DEEPSKYBLUE] KOVI Mediencenter Lite Version für Fire TV Stick (2.Gen)[/COLOR]
+[COLOR white]einfache Installation mit dem KOVI Installer[/COLOR]
 
 
-                                       [COLOR white]Hacker Wizard 1.8.0[/COLOR]		 
+                              [COLOR deepskyblue]KOVI[/COLOR][COLOR white] Builds[/COLOR]		 
 
 [COLOR white]HackerTeam +Plus  v2.2 pesa solo 340mb[/COLOR]
 
