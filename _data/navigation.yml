@@ -6,7 +6,7 @@ main:
   - title: "Tags"
     url: /tags/
   - title: "Apps"
-    url: /app/
+    url: /apps/
   - title: "Plugins"
     url: /plugins/
   - title: "Repositories"
