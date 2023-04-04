@@ -1,303 +1,633 @@
+@-webkit-keyframes appear {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes appear {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 body {
-  width: 100%;
-  overflow-x: hidden;
-  font-family: "Bree Serif", serif;
+  font-family: "Roboto", -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
   font-weight: 400;
-  letter-spacing: 1px;
-  overflow: hidden;
+  background-color: #fff;
+  color: #000;
+  padding-bottom: 4rem;
 }
 
-h1 {
-  font-family: "Marmelad", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  letter-spacing: 0px;
-  font-size: 2.75em;
+a img {
+  visibility: visible;
+}
+a span:first-child {
+  visibility: visible;
 }
 
-#container {
-  position: relative;
-  left: 0;
-  transition: left 300ms ease;
-  display: inline-block;
-  width: 100%;
-}
-#container #content {
-  position: relative;
-  width: 100%;
-  background: #404040;
-  z-index: 1;
-  float: left;
-  overflow: hidden;
-}
-#container #content .left-burger {
-  position: relative;
-  width: 50%;
-  float: left;
-  background: transparent;
-  z-index: 100;
-}
-#container #content .left-burger h2 {
-  position: relative;
-  z-index: auto;
-}
-#container #content .left-burger .triangle {
-  width: 0;
-  height: 0;
-  border-top: solid #f1f1f1;
-  border-right: solid transparent;
-  border-left: none;
-  border-bottom: none;
+.google-logo {
+  background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/59615/logo--google.svg?v=2) no-repeat 50% 50%;
+  background-size: 120px 44px;
+  width: 120px;
+  height: 44px;
+  color: #4285F4;
+  display: block;
   position: absolute;
+  top: 0.3rem;
+  right: 1.5rem;
+  z-index: 2;
 }
-#container #content .right-slider {
-  position: relative;
-  width: 50%;
-  float: left;
-  background: transparent;
+.google-logo a {
+  display: block;
+  width: 120px;
+  height: 44px;
 }
-#container #content .right-slider h2 {
-  position: absolute;
-  bottom: 30px;
-  right: 30px;
+@media screen and (max-width: 530px) {
+  .google-logo {
+    background-position: 0 3px;
+    margin-left: -20px;
+    transform: scale(0.6);
+  }
+}
+@media screen and (max-width: 255px) {
+  .google-logo .google_logo {
+    display: none;
+  }
 }
 
-#main-nav {
-  width: 100%;
-  background: #333;
-  position: fixed;
-  z-index: 100;
-  display: inline-block;
+#top {
+  padding-top: 30px;
+  background-color: #fafafa;
+  border-bottom: 1px solid #ebebeb;
 }
-#main-nav .logo {
-  padding: 20px 50px;
-  margin: 0;
-  color: #fff;
+
+#search {
+  border-color: transparent;
+  margin-bottom: 2rem;
+  width: 100%;
+  max-width: 632px;
+  height: 44px;
+}
+@media screen and (max-width: 530px) {
+  #search {
+    padding: 10px;
+    height: 60px;
+  }
+  #search a {
+    max-width: 80px;
+  }
+}
+#search form {
+  display: inline;
+}
+#search form #GoogleSearch input {
+  position: relative;
+  line-height: 34px;
+  margin-bottom: 5px;
+  width: 100%;
+  height: 34px;
+  font: 16px arial, sans-serif;
+  padding-left: 16px;
+  border-color: transparent;
+  background-color: #fff;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+  height: 44px;
+  border-radius: 3px;
+  transition: box-shadow 200ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+#search form #GoogleSearch input:hover, #search form #GoogleSearch input:focus {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+#search form #GoogleSearch button {
+  display: none;
+  color: #4284f3;
+  background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/59615/icon--microphone.png) no-repeat 50% 50%;
+  background-size: 24px 24px;
+  border-color: transparent;
+  border-radius: 0 2px 2px 0;
+  width: 24px;
+  height: 24px;
   cursor: pointer;
-  opacity: 1;
-  transition: opacity 200ms ease;
-  position: relative;
-}
-#main-nav #bun {
-  position: fixed;
-  cursor: pointer;
-  right: 30px;
-  top: 25px;
-  background: #404040;
-  width: 38px;
-  height: 38px;
-  border: 1px solid #444444;
-  border-radius: 5px;
-  box-shadow: 0px 0px 0px 1px #1f1f1f;
-  overflow: hidden;
-}
-#main-nav #bun .mmm-burger {
-  position: relative;
-  width: 25px;
-  margin: 18px 7px 0;
-  height: 3px;
-  background: #fff;
-}
-#main-nav #bun .mmm-burger:before {
-  content: '';
   position: absolute;
-  width: 100%;
-  height: 3px;
-  background: #fff;
-  right: 0;
-  top: -8px;
-}
-#main-nav #bun .mmm-burger:after {
-  content: '';
-  position: absolute;
-  width: 100%;
-  height: 3px;
-  background: #fff;
-  right: 0;
-  top: 8px;
-}
-#main-nav #bun:before {
-  content: '';
-  top: -10px;
   left: -45px;
-  width: 30px;
-  height: 75px;
-  position: absolute;
-  opacity: 0;
-  background: rgba(255, 255, 255, 0.2);
-  transform: rotate(25deg);
-  transition: left 300ms linear 50ms, opacity 20ms linear;
-}
-#main-nav #bun:hover:before {
-  opacity: 1;
-  left: 100px;
+  outline: 0;
+  box-shadow: none;
+  z-index: 99;
 }
 
-#sidebar {
+.menu-wrapper {
+  width: 80px;
+  height: 80px;
   position: fixed;
-  z-index: 999;
-  height: 100%;
-  width: 300px;
-  background: #404040;
-  overflow-x: hidden;
-  overflow-y: scroll;
-  margin: 0;
-  left: -300px;
-  top: 0;
-  transition: left 300ms ease;
+  top: 15px;
+  right: 10px;
+  z-index: 3;
 }
-#sidebar #mobile-nav .mobile-logo {
-  color: white;
-  font-size: 2rem;
+.menu-wrapper img {
+  width: 34px;
+  height: 60px;
+}
+@media screen and (max-width: 900px) {
+  .menu-wrapper {
+    top: -8px;
+    right: -8px;
+    width: 40px;
+    height: 40px;
+  }
+}
+.menu-wrapper:hover .menu {
+  width: 200px;
+  height: 275px;
+  border-radius: 3px;
+  z-index: 999;
+}
+.menu-wrapper:hover .menu img {
+  opacity: 0;
+  transition: all 50ms ease-in;
+}
+.menu-wrapper:hover .menu ul {
+  display: block;
+  list-style-type: none;
+  color: #fff;
+  display: block;
+  position: absolute;
+  top: 0;
   width: 100%;
   text-align: center;
-  padding: 25px 0;
-  margin: 0;
-  opacity: 0;
-  transition: opacity 1500ms ease;
-}
-#sidebar #mobile-nav ul {
-  margin: 0;
-  padding: 4px 0;
-}
-#sidebar #mobile-nav ul .nav-item {
-  position: relative;
-  border-top: 0px solid trandsparent;
-  border-bottom: 0px solid trandsparent;
-  float: left;
-  list-style: none;
-  width: 100%;
-  color: #fff;
-  font-size: 1.25rem;
-  font-weight: 300;
-  background: rgba(255, 255, 255, 0.05);
-  border-top: 1px solid #5a5a5a;
-  border-bottom: 1px solid #333;
-  overflow: hidden;
-  cursor: pointer;
-  transform: scale(0.75, 0.75);
-  opacity: 0;
-  transition: left 300ms linear 2s, opacity 100ms ease-in 600ms;
-  transition: transform 0.3s cubic-bezier(0.45, 1.8, 0.5, 0.75) 500ms;
-  transition: border-top 40 ease 0ms, border-bottom 40 ease 0ms, box-shadow 150 ms ease-in;
-}
-#sidebar #mobile-nav ul .nav-item:hover {
-  box-shadow: 0 0px 12px 3px #333;
-  z-index: 100;
-}
-#sidebar #mobile-nav ul .nav-item:hover:after {
-  color: #fff;
-}
-#sidebar #mobile-nav ul .nav-item h3 {
-  position: relative;
-  font-size: 1rem;
-  font-weight: 400;
-  color: #fff;
-  padding: 15px 25px;
-  margin: 0;
-  text-shadow: 0px -2px #333;
-}
-#sidebar #mobile-nav ul .nav-item:first-child {
-  border-top: 1px solid #333;
-  margin: 0;
-}
-#sidebar #mobile-nav ul .nav-item:first-child:hover {
-  box-shadow: 0 4px 16px 0px #333 !important;
-}
-#sidebar #mobile-nav ul .nav-item:last-child {
-  border-bottom: 1px solid #333;
-}
-#sidebar #mobile-nav ul .nav-item:last-child:hover {
-  box-shadow: 0 -4px 16px 0px #333 !important;
-}
-#sidebar #mobile-nav ul .sub-nav {
-  width: 100%;
-  position: relative;
-  margin: 0;
+  margin: 5px 0;
   padding: 0;
-  overflow: hidden;
-  box-shadow: inset 0 -7px 12px rgba(0, 0, 0, 0.15) !important;
+  font-size: 22px;
 }
-#sidebar #mobile-nav ul .sub-nav .sub-nav-item {
-  position: relative;
-  float: left;
-  list-style: none;
-  width: 100%;
+.menu-wrapper:hover .menu ul li {
+  transition: all 200ms ease-in;
+  width: 180px;
+  margin: 0 auto;
+}
+.menu-wrapper:hover .menu ul li a {
+  font-family: "Product Sans", "Roboto", -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+  font-weight: 400;
+  text-decoration: none;
+  display: block;
+  width: 180px;
+  color: #aaa;
+  padding: 7px 0;
+  margin: 5px 0;
+  border-radius: 4px;
+  transition: all 100ms ease-in;
+}
+.menu-wrapper:hover .menu ul li a:hover {
+  color: #4285F4;
+  background-color: #fafafa;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  -webkit-appearance: none;
+}
+.menu-wrapper:hover .menu ul li a:focus, .menu-wrapper:hover .menu ul li a:active {
   color: #fff;
-  font-size: 1.25rem;
-  font-weight: 300;
-  overflow: hidden;
+  background-color: #4285F4;
+}
+.menu-wrapper .menu {
+  width: 60px;
+  height: 60px;
+  top: 25px;
+  right: 20px;
+  border-radius: 50%;
+  background-color: #fff;
+  box-shadow: 1px 1px 10px 0px;
+  text-align: center;
+  color: #fff;
+  position: fixed;
   cursor: pointer;
-  border-top: 1px solid #4a4a4a;
-  border-bottom: 1px solid #333;
+  z-index: 3;
+  box-shadow: 0 2px 2.5px 0 rgba(0, 0, 0, 0.12), 0 2px 2px 0 rgba(0, 0, 0, 0.24);
+  transition: all 200ms ease-in-out;
 }
-#sidebar #mobile-nav ul .sub-nav .sub-nav-item:hover {
-  background: rgba(0, 0, 0, 0.1);
+.menu-wrapper .menu ul {
+  display: none;
+  -webkit-animation: appear 1000ms;
+          animation: appear 1000ms;
 }
-#sidebar #mobile-nav ul .sub-nav .sub-nav-item:hover h4 {
-  color: #fff;
-}
-#sidebar #mobile-nav ul .sub-nav .sub-nav-item h4 {
-  position: relative;
-  font-size: 1rem;
-  font-weight: 300;
-  color: #f1f1f1;
-  padding: 11px 20px 10px 40px;
-  margin: 0;
-  text-shadow: 0px -2px #333;
-}
-#sidebar #mobile-nav ul .sub-nav .sub-nav-item:first-child {
-  border-top: none;
-}
-#sidebar #mobile-nav ul .sub-nav .sub-nav-item:last-child {
-  border-bottom: none;
-}
-
-.nav-slide {
-  left: 0 !important;
-}
-.nav-slide #mobile-nav .mobile-logo {
-  opacity: 1 !important;
+@media screen and (max-width: 900px) {
+  .menu-wrapper .menu {
+    top: -5px;
+    right: -5px;
+    width: 40px;
+    height: 40px;
+    border-radius: 5px;
+  }
+  .menu-wrapper .menu img {
+    width: 25px;
+    height: 43px;
+    margin-left: -3px;
+  }
 }
 
-.body-slide {
-  left: 300px !important;
+.sites {
+  padding-top: 3rem;
+  color: inherit;
+  display: flex;
+  flex-flow: row wrap;
+  align-content: space-between;
+  justify-content: center;
 }
-.body-slide #main-nav .logo {
-  opacity: 0 !important;
+.sites a {
+  color: inherit;
+  font-size: 1.3rem;
+  background: black;
+  border-radius: 4px;
+  width: 188px;
+  height: 120px;
+  margin: 1rem;
+  line-height: 120px;
+  text-align: center;
+  color: #4584ee;
+  box-sizing: border-box;
+  display: block;
+  vertical-align: middle;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.28);
+  transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  -webkit-appearance: none;
 }
-
-.item-slide {
-  transform: scale(1, 1) !important;
-  opacity: 1 !important;
+.sites a:hover, .sites a:focus, .sites a:active {
+  box-shadow: 0 5px 12px rgba(0, 0, 0, 0.3);
 }
-
-.scroll-jam {
-  height: 100%;
-  overflow-y: hidden;
+.sites a span:nth-child(1) {
+  font-family: Material-Icons;
+  padding-right: 0;
+  font-size: 55px;
 }
-
-.arrowed:after {
-  content: '+';
-  width: 25px;
-  height: 25px;
+.sites a span#title {
+  opacity: 0;
   position: absolute;
-  color: #333;
-  right: 6px;
-  font-size: 26px;
-  top: 9px;
+  font-size: 16px;
+  font-family: "Roboto", -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+  font-weight: 400;
+  text-rendering: optimizeLegibility;
+  transition: all ease-in-out 150ms;
+  position: absolute;
+  top: 77px;
+  left: 0;
+  color: #bbb;
+  width: 188px;
+  height: 1rem;
+  text-align: center;
+  text-shadow: none;
+}
+.sites a:hover span#title {
+  opacity: 1;
+}
+.sites a img {
+  width: 55px;
+}
++ .sites a:nth-child(3n) {
+  page-break-after: always;
+}
+.sites a:hover, .sites a:focus, .sites a:active {
+  transform: translateY(-5px);
+  text-decoration: none;
+  color: #4584ee;
 }
 
-.selected {
-  box-shadow: 0 0 12px 3px #333 !important;
+#Amazon {
+  background: #0b0c07;
 }
-.selected:after {
-  content: "_";
-  width: 25px;
-  height: 25px;
+#Amazon img {
+  filter: invert(1);
+}
+
+#Apple {
+  background: #999;
+}
+#Apple img {
+  filter: invert(1);
+}
+
+#Behance {
+  background: #1769ff;
+}
+#Behance img {
+  filter: invert(1);
+}
+
+#Bootstrap {
+  background: #563d7c;
+}
+#Bootstrap img {
+  filter: invert(1);
+}
+
+#ChromeStore {
+  background: #e3e4e5;
+}
+#ChromeStore img {
+  filter: invert(0);
+  width: 65px;
+}
+
+#Codepen {
+  background: #181818;
+}
+#Codepen img {
+  filter: invert(1);
+}
+
+#Dribbble {
+  background: #e84c88;
+}
+#Dribbble img {
+  filter: invert(1);
+}
+
+#Dropbox {
+  background: #007ee5;
+}
+#Dropbox img {
+  filter: invert(1);
+}
+
+#Facebook {
+  background: #3b5998;
+}
+#Facebook img {
+  filter: invert(1);
+}
+
+#Feedly {
+  background: #6cc655;
+}
+#Feedly img {
+  filter: invert(1);
+}
+
+#Flickr {
+  background: #0063dc;
+}
+#Flickr img {
+  filter: invert(1);
+}
+
+#Flipboard {
+  background: #df272e;
+}
+#Flipboard img {
+  filter: invert(1);
+}
+
+#Firefox {
+  background: #c13832;
+}
+#Firefox img {
+  filter: invert(1);
+}
+
+#GitHub {
+  background: #25292e;
+}
+#GitHub img {
+  filter: invert(1);
+}
+
+#Google {
+  background: #4285F4;
+}
+#Google img {
+  filter: invert(1);
+}
+
+#Keep {
+  background: #ffbb00;
+}
+#Keep img {
+  filter: invert(0);
+}
+
+#GoogleMusic {
+  background: #ff5722;
+}
+#GoogleMusic img {
+  filter: invert(1);
+}
+
+#GooglePlay {
+  background: #607d8b;
+}
+#GooglePlay img {
+  filter: invert(1);
+}
+
+#Hangouts {
+  background: #0c9d58;
+}
+#Hangouts img {
+  filter: invert(1);
+}
+
+#Heroku {
+  background: #430098;
+}
+#Heroku img {
+  filter: invert(1);
+}
+
+#Hulu {
+  background: #66aa33;
+}
+#Hulu img {
+  filter: invert(1);
+  width: 75px;
+}
+
+#Imgur {
+  background: #34373c;
+}
+#Imgur img {
+  filter: invert(0);
+  width: 100px;
+}
+
+#Inbox {
+  background: #4285F4;
+}
+#Inbox img {
+  filter: invert(0);
+}
+
+#Instagram {
+  background: #e4405f;
+}
+#Instagram img {
+  filter: invert(1);
+}
+
+#Instapaper {
+  background: #1f1f1f;
+}
+#Instapaper img {
+  filter: invert(1);
+}
+
+#JSFiddle {
+  background: #3fa1f5;
+}
+#JSFiddle img {
+  filter: invert(1);
+}
+
+#LinkedIn {
+  background: #0077b5;
+}
+#LinkedIn img {
+  filter: invert(1);
+}
+
+#Medium {
+  background: #00ab6c;
+}
+#Medium img {
+  filter: invert(1);
+}
+
+#Messenger {
+  background: #0084ff;
+}
+#Messenger img {
+  filter: invert(0);
+}
+
+#Netflix {
+  background: #e50914;
+}
+#Netflix img {
+  filter: invert(1);
+}
+
+#OperaAddons {
+  background: #ff1b2d;
+}
+#OperaAddons img {
+  filter: invert(1);
+}
+
+#Pinterest {
+  background: #bd081c;
+}
+#Pinterest img {
+  filter: invert(1);
+}
+
+#Pocket {
+  background: #ef3f56;
+}
+#Pocket img {
+  filter: invert(1);
+}
+
+#ProductHunt {
+  background: #da552f;
+}
+#ProductHunt img {
+  filter: invert(0);
+}
+
+#Quora {
+  background: #a82400;
+}
+#Quora img {
+  filter: invert(1);
+}
+
+#Reddit {
+  background: #ff4500;
+}
+#Reddit img {
+  filter: invert(1);
+}
+
+#RSS {
+  background: #ffa500;
+}
+#RSS img {
+  filter: invert(1);
+}
+
+#Slack {
+  background: #6ecadc;
+}
+#Slack img {
+  filter: invert(1);
+}
+
+#Spotify {
+  background: #2ebd59;
+}
+#Spotify img {
+  filter: invert(1);
+}
+
+#Twitch {
+  background: #6441a5;
+}
+#Twitch img {
+  filter: invert(1);
+}
+
+#Twitter {
+  background: #1da1f2;
+}
+#Twitter img {
+  filter: invert(1);
+}
+
+#Vimeo {
+  background: #1ab7ea;
+}
+#Vimeo img {
+  filter: invert(1);
+}
+
+#Wikipedia {
+  background: #fff;
+}
+#Wikipedia img {
+  filter: invert(0);
+}
+
+#YouTube {
+  background: #fd0016;
+}
+#YouTube img {
+  filter: invert(1);
+  width: 65px;
+}
+
+#YouTubeMusic {
+  background: #191919;
+}
+#YouTubeMusic img {
+  filter: invert(0);
+}
+
+#Instagram {
+  background: radial-gradient(circle farthest-corner at 35% 90%, #fec564, transparent 50%), radial-gradient(circle farthest-corner at 0 140%, #fec564, transparent 50%), radial-gradient(ellipse farthest-corner at 0 -25%, #5258cf, transparent 50%), radial-gradient(ellipse farthest-corner at 20% -50%, #5258cf, transparent 50%), radial-gradient(ellipse farthest-corner at 100% 0, #893dc2, transparent 50%), radial-gradient(ellipse farthest-corner at 60% -20%, #893dc2, transparent 50%), radial-gradient(ellipse farthest-corner at 100% 100%, #d9317a, transparent), linear-gradient(#6559ca, #bc318f 30%, #e33f5f 50%, #f77638 70%, #fec66d 100%);
+}
+
+#gh-star {
   position: absolute;
-  color: #f1f1f1;
-  right: 4px;
-  font-size: 20px;
-  top: 4px;
+  top: 1rem;
+  left: 1rem;
+}
+
+#gh-fork {
+  position: absolute;
+  top: 1rem;
+  left: 4.5rem;
 }
