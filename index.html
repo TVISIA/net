@@ -267,15 +267,63 @@
 		<div class="sidebar-bg"></div>
 		<!-- end #sidebar -->
 		    <center>
-  <div id="content" class="content"></div>
-  <div class="container">
-  <div class="search-block">
-  <script async="" src="https://cse.google.com/cse.js?cx=001844535802072801793:c0ybnwpxx4u"></script><div class="gcse-search" width="100px"></div></div>
+<div class="input-group mb-3" id="search-form">
+      <div class="input-group-prepend">
+        <select class="custom-select custom-select-lg mb-3" id="category-select">
+          <option value="all" selected>Everything</option>
+          <option value="video">Video</option>
+          <option value="audio">Audio</option>
+          <option value="ebook">eBook</option>
+          <option value="image">Image</option>
+          <option value="software">Software</option>
+          <option value="documents">Word Excel ...</option>
+          <option value="archive">Archive</option>
+        </select>
+      </div>
+      <input type="text" class="form-control" placeholder="search here" id="search-input">
+    </div>
+    <button type="button" class="btn btn-info" id="search-button" onclick="search()">Go!</button>
+    <footer>2023 © KOVI.ML</footer>
+  </div>
+
+<script type="text/javascript">
+    
+
+
+    function search() {
+  // Récupération de la valeur du champ de recherche
+  var searchTerm = document.getElementById("search-input").value;
+  // Récupération de la catégorie sélectionnée
+  var category = document.getElementById("category-select").value;
+  var website = 'https://www.google.com/search?q=';
+  var inURL = ' -inurl:(jsp|pl|php|html|aspx|htm|cf|shtml)';
+  var finURL = ' intitle:index.of -inurl:(listen77|mp3raid|mp3toss|mp3drug|index_of|wallywashis)';
+  // Tableau des formats de fichiers par catégorie
+  var formats = {
+    "video": '(wmv|mpg|avi|mp4|mkv|mov)',
+    "audio": '(ac3|flac|m4a|mp3|ogg|wav|wma)',
+    "ebook": '(pdf|epub)',
+    "image": '(bmp|gif|jpg|png|psd|tif|tiff)',
+    "software": '(exe|iso|dmg)',
+    "documents": '(doc|docx|xls|xlsx|ppt|pptx)',
+    "archive": '(rar|zip|7zip|tar|gz)'
+  };
+  // Construction de la requête en fonction de la catégorie sélectionnée
+  var query = website + searchTerm;
+  // Si la catégorie est définie dans le tableau des formats, ajout des formats à la requête
+  if (formats[category]) {
+    query += formats[category] + ' +' + inURL+'+'+finURL;
+  }
+  // Ouvrir la page de résultats de la recherche dans un nouvel onglet
+  window.open(query);
+}
+
+
+</script>
   <hr>
 </div>
 <!-- partial -->
   <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js'></script>
 <script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css'></script><script  src="./script.js"></script>
-<div id="ww_37f7395b3c2c4" width="150" v='1.3' loc='id' a='{"t":"ticker","lang":"de","sl_lpl":1,"ids":["wl3085"],"font":"Arial","sl_ics":"one_a","sl_sot":"celsius","cl_bkg":"#FFFFFF00","cl_font":"#000000","cl_cloud":"#d4d4d4","cl_persp":"#2196F3","cl_sun":"#FFC107","cl_moon":"#FFC107","cl_thund":"#FF5722"}'>Weather Data Source: <a href="https://oneweather.org/de/deutschland/30_tage/" id="ww_37f7395b3c2c4_u" target="_blank">Wetter 30 tage</a></div><script async src="https://app1.weatherwidget.org/js/?id=ww_37f7395b3c2c4"></script>
 </body>
 </html>
