@@ -270,26 +270,30 @@
 
 <!-- partial -->
 			<center>
-			  
-					<div class="" id="search-form" width="10">
+		
       <div class="input-group-prepend">
-        <select class="" id="category-select" width="100">
-          <option value="all" selected>Everything</option>
-          <option value="video">Video</option>
-          <option value="audio">Audio</option>
-          <option value="ebook">eBook</option>
-          <option value="image">Image</option>
-          <option value="software">Software</option>
-          <option value="documents">Word Excel ...</option>
-          <option value="archive">Archive</option>
+        <select class="" id="category-select" width="50px">
+          <option value="all" selected>nach allem suchen</option>
+          <option value="video">Video - MP4 / AVI / ... </option>
+          <option value="audio">Audio - MP3 / WAV / ... </option>
+          <option value="ebook">eBook - PDF / ...</option>
+          <option value="image">Grafik - JPG / PNG / ...</option>
+          <option value="software">Software - APK / EXE / ...</option>
+          <option value="documents">Dokument - DOC / CSV / ...</option>
+          <option value="archive">Archiv - ZIP/ RAR / ... </option>
         </select>
+             </center>
       </div>
-      <input type="text" class="" placeholder="search keyword ..." id="search-input" width="80">
+ 
+      <center>
+      <input type="text" class="" placeholder="Suchbegriff (vorher Kategorie wählen)" id="search-input" width="200">
     </div>
-    <button type="button" class="btn btn-info" id="search-button" onclick="search()">Go!</button>
+    <button type="button" class="btn btn-info" id="search-button" onclick="search()" width="100">Suche</button>
   </div>
+  </center>
+ <center>
 <script type="text/javascript">
-    
+
 
 
     function search() {
