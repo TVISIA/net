@@ -1493,3 +1493,14 @@ table.dataTable thead .sorting_desc_disabled:after {
     margin-left: 220px;
     padding: 20px 30px;
 }
+div.ex1 {
+  width: 500px;
+  margin: auto;
+  border: 3px solid #73AD21;
+}
+
+div.ex2 {
+  max-width: 500px;
+  margin: auto;
+  border: 3px solid #73AD21;
+}
