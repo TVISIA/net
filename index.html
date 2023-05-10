@@ -312,9 +312,9 @@
           <option value="mac">MAC | STB </option>
         </select>
       </div>
-      <input type="text" placeholder="Suche nach Dateiendungen ihrer Wahl" id="search-input">
+      <input type="text" class="form-outline mb-4" placeholder="Suche nach Dateiendungen ihrer Wahl" id="search-input">
     </div>
-    <button type="button" id="search-button" onclick="search()">Suche</button
+    <button type="button" class="btn btn-info" id="search-button" onclick="search()">Suche</button
   </div>
 <script type="text/javascript">
     
@@ -325,7 +325,7 @@
   var searchTerm = document.getElementById("search-input").value;
   // Récupération de la catégorie sélectionnée
   var category = document.getElementById("category-select").value;
-  var website = 'https://www.google.de/search?q=';
+  var website = 'https://www.google.com/search?q=';
   var inURL = ' -inurl:(jsp|pl|php|html|aspx|htm|cf|shtml)';
   var finURL = ' intitle:index.of -inurl:(listen77|mp3raid|mp3toss|mp3drug|index_of|wallywashis)';
   // Tableau des formats de fichiers par catégorie
