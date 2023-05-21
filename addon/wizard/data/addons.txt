@@ -1,61 +1,33 @@
 name="[B][COLOR white]Die besten Addons[/COLOR][/B]"
-
 version="18.0"
-
 url="http://"
-
 gui="http://"
-
 kodi="18"
-
 theme="http://"
-
 icon="http://"
-
 fanart="http://"
-
 preview="http://"
-
 adult="no"
-
 description="Die besten Plugins / Scripts für Version 18.x"
 
 name="VAVOO.TO"
-
 plugin="plugin.video.vavoo.to"
-
 url="https://kovi.ml/repo/zips/plugin.video.vavoo.to-5.3.zip"
-
 repository="repository.kovi18"
-
 repositoryxml="https://kovi.ml/repo/"
-
 repositoryurl="https://kovi.ml/repo/"
-
 icon="https://kovi.ml/repo/plugin.video.vavoo.to/icon.png"
-
 fanart="https://stva.zriel.ga/wizard/imagenes/fanart.jpg"
-
 adult="no"
-
 description="VAVOO.TO Plugin. Dieses Plugin Dient nur zu experimentellen Zwecken. Wir haben keinen Einfluss auf den Code und übernehmen keinerlei Haftung."
 
 name="Kelebek"
-
 plugin="script.kelebek"
-
 url="https://kelebekmariposas.github.io/Kelebek/script.kelebek.zip"
-
 repository="none"
-
 repositoryxml="http://"
-
 repositoryurl="http://"
-
 icon="https://1.bp.blogspot.com/-YF54uh5sGKI/Xgp3vuQw8yI/AAAAAAAA468/KRmYw4oPtXkHK-_kCMG7T7XOt5CkaTTNgCLcBGAsYHQ/s1600/addon-kelebek-kodi.png"
-
 fanart="https://mundokodi.com/wp-content/uploads/2022/10/5-notif-vavoo.jpg"
-
 adult="no"
-
 description="All-in-one Installer Script/Program. Sprache leider nur spanisch."
