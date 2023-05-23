@@ -1,7 +1,7 @@
 name="VAVOO"
 plugin="plugin.video.vavooto"
 url="https://github.com/KOVI18/repo/raw/main/zips/plugin.video.vavooto-5.3.zip"
-repository="repository.kovi18"
+repository=""
 repositoryxml=""
 repositoryurl=""
 icon="https://raw.githubusercontent.com/KOVI18/repo/main/plugin.video.vavooto/icon.png"
